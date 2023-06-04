@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  height: 6rem;
+  padding: 0 3%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: 12rem;
+  /* background: #fff; */
+}
+.nav-item {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+}
+.nav-link {
+  display: inline-block;
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.2rem;
+  background: #fff;
+  left: 0;
+  bottom: -0.8rem;
+  transition: all 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
